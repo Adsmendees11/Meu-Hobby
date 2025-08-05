@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Meu Hobby</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Tela de autenticação -->
+  <div id="authScreen">
+    <img src="photoapp.jpg" id="minhaFoto" alt="MeuHobby"
+    width="120" height="120" />
+    <h2>Bem-vindo!</h2>
+
+    <input id="userNameInput" placeholder="Nome de usuário" />
+    <input id="userPasswordInput" type="password" placeholder="Senha" /><br>
+
+    <button id="loginBtn">Entrar</button><br>
+    <button id="registerBtn">Cadastrar novo usuário</button>
+    <button id="forgotPasswordBtn" style="display: none;">Esqueci minha senha</button>
+<div id="supportMessage" style="display: none;"></div>
+
+    <div id="taglines"></div>
+
+    <p class="creditos">Criado por Ânderson Mendes</p>
+  </div>
+
+  <!-- Tela principal pós-login -->
+  <div id="mainView" style="display: none;">
+
+<!-- Botão do menu estilo "hambúrguer" -->
+<div id="menuHamburguer">☰</div>
+
+<!-- Painel lateral com configurações -->
+<div id="painelConfig">
+  <h4>Configurações</h4>
+  <ul>
+    <!-- 🔘 Item: Cor de fundo -->
+    <li>
+      <div class="area-cor" style="display: none;">
+        <button id="btnCorFundo" class="circulo-cor"></button>
+        <input type="color" id="colorPicker" style="display: none;" />
+      </div>
+    </li>
+    <!-- 🚪 Botão para sair da conta -->
+    <li>
+      <button id="btnSairConta">Sair da Conta</button>
+    </li>
+  </ul>
+</div>
+
+    <button id="backToHomeBtn" class="back-home-btn">⮢</button>
+    <h3 id="welcomeName"></h3>
+    <div id="photoBlock">
+      <div id="addPhotoBox">+</div>
+      <div id="previewPhotos"></div>
+    </div>
+    <button id="createGalleryBtn">Criar Galeria</button>
+    <div id="shareArea">
+    </div>
+  </div>
+
+  <!-- Visualização da galeria -->
+  <div id="galleryView" style="display: none;">
+    <button id="backBtn">⮢</button>
+    <div class="botaocompartilhar">
+    <button onclick="copiarLinkGaleria()">Compartilhar galeria</button>
+    </div>
+  </div>
+
+  <!-- Campo oculto para seleção de fotos -->
+  <input
+    type="file"
+    id="photoInput"
+    accept="image/*"
+    multiple
+    capture="environment"
+    style="display: none;"
+  />
+
+  <!-- Script principal -->
+<script type="module" src="script.js"></script>
+<script type="module" src="menuConfig.js"></script>
+</body>
+</html>

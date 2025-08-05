@@ -1,0 +1,338 @@
+/* Estilo base da página */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Tela de login centralizada */
+#authScreen {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(80, 0, 120, 0.2);
+}
+
+
+/* Estilo dos campos de entrada na tela de login */
+#authScreen input {
+  padding: 10px;
+  font-size: 16px;
+  width: 220px;
+  margin-bottom: 10px;
+}
+
+/* tela inicial */
+
+img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+input {
+  margin: 10px;
+  padding: 8px;
+  width: 80%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#loginBtn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#registerBtn {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+#taglines {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  height: 30px;
+  transition: opacity 0.5s;
+}
+
+.creditos {
+  margin-top: 50px;
+  font-size: 12px;
+  color: #888;
+}
+
+/* Estilo dos botões de login/cadastro */
+#authScreen button {
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: #3d0075;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#authScreen button:hover {
+  background-color: #ae00ff;
+}
+
+
+/* Tela principal com conteúdo centralizado */
+#mainView {
+  text-align: center;
+}
+
+/* Saudação com o nome do usuário */
+#welcomeName {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Botão de voltar para a tela inicial */
+.back-home-btn {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  background-color: #310170;
+  color: #ffffff;
+  border: none;
+  padding: 6px 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Bloco de fotos com layout flexível */
+#photoBlock {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  align-items: center;
+}
+
+/* Caixa de adição de foto estilizada */
+#addPhotoBox {
+  width: 100px;
+  height: 100px;
+  border: 2px dashed #777;
+  border-radius: 10px;
+  font-size: 36px;
+  color: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Pré-visualização das fotos */
+#previewPhotos {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Container para cada foto preview */
+.preview-container {
+  position: relative;
+}
+
+/* Imagem da pré-visualização */
+.preview-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  opacity: 0.6;
+}
+
+/* Botão de remoção estilizado sobre a imagem */
+.remove-btn {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  border-radius: 50%;
+  background-color: #e53935;
+  color: #fff;
+  padding: 0;
+  width: 28px;
+  height: 28px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Botão para criar galeria */
+#createGalleryBtn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  font-size: 1em;
+  background-color: #330091;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Área de compartilhamento da galeria */
+#shareArea {
+  margin-top: 15px;
+}
+
+/* Tela da galeria gerada com imagens flutuantes */
+#galleryView {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1; /* Garante que fique acima do fundo */
+}
+
+/* Estilo das imagens flutuantes na galeria */
+#galleryView img {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  z-index: 2; /* 👈 acima do fundo da galeria */
+  border-radius: 12px;
+  object-fit: cover;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão de voltar da galeria */
+#backBtn {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  background-color: #310170;
+  color: #ffffff;
+  border: none;
+  padding: 6px 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Botão de compartilhar galeria */
+.botaocompartilhar button {
+  position: absolute; /* Define a posição relativa ao elemento pai ou à tela */
+  top: 5px; /* Distância do topo */
+  right: 10px; /* Distância da direita */
+  padding: 10px 20px;
+  background-color: #4b007c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilo da imagem expandida na galeria */
+.imagem-expandida {
+  animation: aparecer 0.3s ease-in-out;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: scale(0.7); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* configurações do menu hamburguer */
+#menuHamburguer {
+  position: fixed;
+  top: 18px;
+  right: 24px;
+  font-size: 2.2em;
+  background: none;
+  border: none;
+  color: #310170;
+  cursor: pointer;
+  z-index: 1100;
+  user-select: none;
+}
+
+#painelConfig {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50vw; /* metade da tela */
+  max-width: 400px; /* opcional: limita a largura máxima */
+  height: 100vh;
+  background: #fff;
+  box-shadow: -2px 0 16px rgba(0,0,0,0.12);
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+  z-index: 1200;
+  padding: 32px 24px 24px 24px;
+  overflow-y: auto;
+  display: block;
+  transform: translateX(100%);
+}
+
+#painelConfig.ativo {
+  transform: translateX(0);
+}
+
+/* Título e lista de opções */
+#painelConfig h4 {
+  color: #000000; /* Ou outra cor escura fixa */
+}
+
+#painelConfig ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#painelConfig li {
+  margin-bottom: 20px;
+}
+
+/* Botão de rótulo de cor de fundo */
+#btnCorFundoLabel {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Área do seletor de cor */
+.area-cor {
+  margin-top: 10px;
+}
+
+/* Botão circular de cor */
+.circulo-cor {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 1px; /* Espaço para mostrar o gradiente */
+  background: conic-gradient(red, orange, yellow, green, blue, indigo, violet);
+}
+
+/* Oculta o input de cor até ser acionado */
+#colorPicker {
+  display: none;
+}
